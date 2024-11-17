@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new Mudras to DataBase</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+</head>
+<body>
+    <header id="home">
+        <button id="homebtn" onclick="window.location.href='../index.html'">
+        <img src="./home_icon.jpg" alt="Home" id="logo" />
+        </button>
+    </header>
+    <h2>Add a Model To the DataBase</h2>
+    <div class="container">
+        <form id="uploadForm" enctype="multipart/form-data">
+            <div class="input-titles"><p>Enter the name of the model</p></div>
+            <input style="border: 2px solid goldenrod;
+                          background-color: rgba(0, 0, 0, 0.5);" type="text" class="inputAreas" id="modelName" placeholder="Enter model name" required/>
+                          <p class="input-titles">Select the category of models</p>
+            <select style="border: 2px solid goldenrod;
+                            background-color: rgba(0, 0, 0, 0.5);color: white;" class="inputAreas" id="select-cat">
+                        
+                        <option style="color: grey;" value="">--Select Category--</option>
+                        <option value="Bharatanatyam Mudras">Bharatanatyam Mudras</option>
+                        <option value="Bharatanatyam Dance model">Bharatanatyam Dance model</option>
+                            </select>
+            <!-- <label for="description"></label> -->
+            <div class="input-titles"><p>Enter some description about the Mudra</p></div>
+            <textarea style="border: 2px solid goldenrod;
+                             background-color: rgba(0, 0, 0, 0.5);color: white;" class="inputAreas" id="description" placeholder="Give some description about the model"></textarea>
+            <input class="inputAreas" type="file" id="modelFile" accept=".glb" required/>
+            <button style="background-color: rgba(0, 0, 0, 0.5);border: 2px solid goldenrod;" id="submit-btn" class="inputAreas" type="submit">Upload Model</button>
+        </form>
+        <!-- <canvas id="modelPreview"></canvas> -->
+        <!-- <h2>List of Dance models available in Data Base</h2>
+        <div id="loader" class="loader" style="display: none;"></div>
+        <div id="listofDanceModels"></div> -->
+        <h2>List of Mudra models available in Data Base</h2>
+        <div id="loader" class="loader" style="display: none;"></div>
+        <div id="listofModels"></div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

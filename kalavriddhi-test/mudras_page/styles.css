@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* color: ghostwhite; */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* background: linear-gradient(135deg, #ffb3ba, #ffdfba); */
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color:#0F0303;
+    border-radius: 15px;
+    box-shadow: 0 0px 16px rgb(193, 135, 1);
+    position: relative;
+}
+.container .title{
+    font-size: 8rem;
+}
+.title {
+    font-size: 4rem;
+    /* color: #333; */
+    color: gold;
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation: slideInFromTop 1s ease-in-out;
+
+}
+.res{
+    animation: slideInFromTop 1s ease-in-out;
+}
+
+.mudras {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.mudra {
+    /* background: #f9f9f9; */
+    background-color: #2D080A;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(212, 125, 2, 0.9);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.mudra h2{
+    color:goldenrod;
+    font-size: 30px;
+}
+.mudra p{
+    color:yellowgreen;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.mudra:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+.pataka-img {
+    background-image: url('images/pataka.jpeg');
+}
+
+.tripataka-img {
+    background-image: url('images/tripataka.jpeg');
+}
+
+.simhamukha-img {
+    background-image: url('images/simhamukha.jpeg');
+}
+
+.kartarimukha-img {
+    background-image: url('images/kartarimukha.jpeg');
+}
+
+.arala-img {
+    background-image: url('images/arala.jpg');
+}
+
+.shukatunda-img {
+    background-image: url('images/shukatunda.jpg');
+}
+.suchi-img {
+    background-image: url('images/suchi.png');
+}
+.ardhachandra-img {
+    background-image: url('images/ardhachandra.png');
+}
+.chandrakala-img {
+    background-image: url('images/chandrakala.png');
+}
+.mrigashirsha-img {
+    background-image: url('images/mrigashirsha.png');
+}
+.katakamukha-img {
+    background-image: url('images/katakamukha.png');
+}
+.sarpashirsha-img {
+    background-image: url('images/sarpashirsha.png');
+}
+
+
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #444;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+p {
+    color: #777;
+    font-size: 1rem;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .mudras {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .mudras {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}
+.progress{
+    position: absolute;
+    right:15px;
+    width:30vw;
+    max-width: 400px;
+    height: 125px;
+    border-radius: 0.9rem;
+    box-shadow: 5px 5px 4px goldenrod;
+    overflow: hidden;
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
+}
+
+#done-cnt{
+    color:aqua;
+    font-weight: bold;
+}
+.progress-bar{
+    height:20px;
+    background-color: gold;
+    width:0%;
+    transition: width 0.3s;
+    margin: 20px;
+    left:0;
+    max-width: 100%;
+    margin-right:10px;
+}
+header{
+    z-index: 100;
+}
+.reset-progress{
+    background-color:#0F0303;
+    color: white;
+    height:auto;
+    width:auto;
+    border:none;
+}
+.reset-progress:hover{
+    border: 2px solid gold;
+}
+
+#home {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+  
+  #homebtn {
+    width: 80px; 
+    height: 80px; 
+    background: transparent;
+    outline: none;
+    border: 3px solid white;
+    border-radius: 50%; 
+    cursor: pointer;
+    position: fixed;
+    top: 40px;
+    padding: 0;
+    transition: 0.3s;
+    box-shadow: 0px 4px 8px white;
+    z-index : 1000; 
+  }
+  #logo{
+    width: 100%; 
+    height: 100%;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+  #homebtn:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.1); 
+    border-color: white; 
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  @media (max-width: 768px){
+    .title{
+        font-size: 1.5rem;
+    }
+
+    .mudras{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 15px;
+    }
+    .mudra{
+        width: 80%;
+    }
+    .progress{
+        display: none; 
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+    .res{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 480px){
+    .title{
+        font-size: 1.2rem;
+    }
+    .mudra h2{
+        font-size: 1.1rem;
+    }
+    .mudra p{
+        font-size: 0.9rem;
+    }
+    .modal-content{
+        width: 90%;
+    }
+}

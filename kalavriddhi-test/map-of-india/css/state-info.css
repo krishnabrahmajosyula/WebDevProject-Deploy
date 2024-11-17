@@ -1,0 +1,132 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('background.png') no-repeat; 
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    background-attachment: fixed;
+     
+}
+
+#state-info {
+    background-color: transparent; 
+    border-radius: 8px; 
+    margin-top: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    max-width: 600px; 
+    text-align: center; 
+    animation: slideInDown 1s ease-out forwards;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: gold;
+    margin-bottom: 10px; 
+    animation: slideInLeft 1s ease-out 0.5s forwards; /* Delayed slide-in from left */
+    opacity: 0; 
+    
+}
+h2{
+     
+        font-size: 1.5em; 
+        color: rgba(212, 125, 2, 0.9);
+        line-height: 1.5; 
+        animation: slideInRight 1s ease-out 0.7s forwards; /* Delayed slide-in from right */
+        opacity: 0;
+    
+}
+
+p {
+    font-size: 1.2em; 
+    color:yellowgreen;
+    line-height: 1.5; 
+    animation: slideInUp 1s ease-out 0.9s forwards; /* Delayed slide-in from bottom */
+    opacity: 0;
+    
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#home {
+    display: flex;
+    justify-content: flex-start;
+    position: fixed; /* Ensures the header stays fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width to position the button properly */
+    padding: 20px;
+}
+
+#homebtn {
+    width: 80px; /* Adjust based on logo size */
+    height: 80px; /* Adjust based on logo size */
+    background: transparent;
+    outline: none;
+    border: 3px solid white; /* White border */
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer;
+    padding: 0;
+    transition: 0.3s;
+    z-index: 1000; /* Keeps the button on top */
+}
+
+#homebtn:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1); /* Slightly enlarges the button on hover */
+    border: 3px solid gold; /* Changes border color on hover */
+}
+
+#logo {
+    width: 100%; /* Make logo fit inside the button */
+    height: 100%;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+

@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;600;700&display=swap');
+body{
+    background-image: url('home.png');
+    font-family: 'Poppins', sans-serif;
+    font-style: bold;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+    overflow: auto;
+    /* backdrop-filter: blur(2px); */
+    margin: 20px;
+    /* font-family: 'Poppins'; */
+}
+
+body::-webkit-scrollbar{
+    display:none;
+}
+#home {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+  
+  #homebtn {
+    width: 80px; /* Adjust based on logo size */
+    height: 80px; /* Adjust based on logo size */
+    background: transparent;
+    outline: none;
+    border: 3px solid white; /* White border */
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer;
+    position: fixed;
+    top: 40px;
+    padding: 0;
+    transition: 0.3s;
+    /* box-shadow: 0px 4px 8px white; */
+    z-index : 1000; /* Light shadow effect */
+  }
+  
+  #logo {
+    width: 100%; /* Make logo fit inside button */
+    height: 100%;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+  
+  #homebtn:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1); /* Slightly enlarges button on hover */
+    border-color: white; /* Keeps the border white on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow on hover */
+  }
+#header{
+    /* border:2px solid gold; */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    animation: scale 0.5s ease forwards;
+    transform-origin: top;
+    /* box-shadow: 0px 3px 8px gold; */
+    font-family: 'Poppins';
+}
+#heading{
+    
+    color: transparent;
+    background: linear-gradient(90deg, hsl(33, 91%, 47%),white,green); 
+    -webkit-background-clip: text; 
+    background-clip: text;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'poppins';
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+#quizContainer{
+    border:2px solid gold;
+    margin: 20px;
+    flex: 1;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px gold;
+    display: none;
+}
+#instructions{
+    color: white;
+    display: flex;
+    font-style: bold;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+    
+}
+#instructionsheading{
+    color: hsl(191, 74%, 43%);
+    font-size: 2em;
+    font-weight: 600;
+    animation: slide-up 0.5s ease forwards;
+    font-family: 'poppins';
+}
+#rules{
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 5px;
+    margin-bottom: 10px;
+    animation: slide-up 0.5s ease forwards;
+}
+.rules1{
+    margin-bottom: 20px;
+    font-style: bold;
+}
+#instructions button{
+    width: 250px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 600;
+    margin-left: 40px;
+    transition: .5s;
+
+}
+#instructions button:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+
+}
+#questionContainer{
+    border:2px solid gold;
+    margin: 20px;
+    flex: 1;
+    border-radius: 10px;
+    font-style: bold;
+    padding: 15px;
+    box-shadow: 0px 3px 8px gold;
+    display: none;
+}
+#q1{
+    display: none;
+}
+#q2{
+    display: none;
+}
+#q3{
+    display: none;
+}
+#q4{
+    display: none;
+}
+#q5{
+    display: none;
+}
+#question{
+    color: transparent;
+    font-size: 1.5em;
+    font-weight: 700;
+    background: linear-gradient(90deg, hsl(33, 91%, 47%),white,green); 
+    -webkit-background-clip: text; 
+    background-clip: text;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: slide-up 0.5s ease forwards;
+}
+#options{
+    color: lightblue;
+    font-size: 1.5em;
+    font-weight: 700;
+    animation: slide-up 0.5s ease forwards;
+}
+.danceForm{
+    margin-bottom: 20px;
+}
+.prevbtn{
+    width: 250px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 600;
+    margin-left: 40px;
+    transition: .5s;
+
+}
+.nextbtn{
+    width: 250px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 600;
+    margin-left: 40px;
+    transition: .5s;
+
+}
+.prevbtn:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+
+}
+.nextbtn:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+
+}
+.opt{
+    width: 100%; /* Full width of the option */
+    box-sizing: border-box; /* Include padding and border in the width */
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: font-size 0.35s ease;
+}
+.opt:hover{
+    font-size: 1.2em;
+}
+input[type="radio"] {
+    margin-right: 10px; 
+}
+
+#timeDisplay{
+    color: lightgreen;
+    margin-top: 27px;
+    font-size: 1.8em;
+    font-family: monospace;
+    animation: slide-up 0.5s ease forwards;
+}
+#answeredStatus{
+    color: lightblue;
+    font-size: 1.5em;
+    animation: slide-up 0.5s ease forwards;
+}
+#info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+b{
+    color: yellow;
+}
+.circular-score-container {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border: 2px solid gold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 0px 3px 8px gold;
+}
+
+svg {
+    transform: rotate(-90deg); /* Rotate to start the circle from the top */
+    width: 100%;
+    height: 100%;
+}
+.circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 10;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke: url(#gradientStroke);
+    stroke-dasharray: 440; /* Circumference of the circle */
+    stroke-dashoffset: 440; /* Start at zero progress */
+    transition: stroke-dashoffset 1s ease-out; /* Smooth animation */
+    margin-bottom: 5px;
+}
+
+.score-text {
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: gold;
+}
+#resultsheading{
+    color: lightblue;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 0px;
+    animation: slide-up 0.5s ease forwards;
+}
+#finalScore{
+    font-size: 1.5em;
+    color: gold;
+    animation: slide-up 0.5s ease forwards;
+}
+#nextbtns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+#restartbtn{
+    font-size: 1.5em;
+    float: left;
+    padding: 5px 5px;
+    border-radius: 8px;
+    border: 1px solid gold;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 1s ease;
+}
+#leaderboard{
+    font-size: 1.5em;
+    float: right;
+    padding: 5px 5px;
+    border-radius: 8px;
+    border: 1px solid gold;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 1s ease;
+    
+}
+#restartbtn:hover{
+    background-color: white;
+    color: black;
+}
+#leaderboard:hover{
+    background-color: white;
+    color: black;
+}
+@keyframes slide-up {
+    0% {
+        transform: translate(0, 20%); /* Start below its original position */
+        opacity: 0; /* Start invisible */
+    }
+    100% {
+        transform: translate(0, 0); /* End at its original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+@keyframes scale {
+    0% {
+        transform: scale(0); /* Start at 0 size */
+        opacity: 0; /* Start invisible */
+    }
+    100% {
+        transform: scale(1); /* End at full size */
+        opacity: 1; /* Fully visible */
+    }
+}
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-100%); /* Start off-screen left */
+        opacity: 0; /* Start invisible */
+    }
+    100% {
+        transform: translateX(0); /* End in its original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/*pop up*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color:transparent;
+    padding: 20px;
+    border: 2px solid gold; 
+    color: aqua;
+    width: 300px;
+    text-align: center;
+    font-family: 'poppins';
+    border-radius: 20px;
+    backdrop-filter: blur(2px);
+}
+
+#username {
+    width: 90%;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'poppins';
+    font-weight: 510;
+    border: 1px solid aqua;
+    background-color: black;
+    color: yellow;
+    border-radius: 55px;
+}
+#username:hover {
+    border-color: gold;
+}
+#username::placeholder{
+    color: white;
+}
+#username:focus{
+    border-color: gold;
+}
+#submitNameBtn{
+    width: 150px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 600;
+    transition: .5s;
+    font-family: 'poppins';
+}
+#submitNameBtn:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+}
+/* Leaderboard Container */
+#leaderboardbox {
+    display: none; /* Initially hidden */
+    background-color: transparent;
+    border: 2px solid gold;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: aqua;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Leaderboard Header */
+#leaderboardbox h2 {
+    font-size: 24px;
+    color: aqua;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Leaderboard List */
+#leaderboardList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Leaderboard Items */
+.leaderboard-item {
+    font-size: 16px;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    border: 1px solid aqua;
+    color: gold;
+    font-weight: 550;
+    transition: background-color 0.3s ease;
+}
+
+/* Highlight Player */
+.leaderboard-item.player {
+    font-weight: bold;
+    color: #007bff;
+    background-color: #e7f3ff;
+    border: 1px solid #b3d9ff;
+}
+
+/* Bot Item Styling */
+.leaderboard-item.bot {
+    color: gold;
+}
+
+/* Hover Effect for Items */
+.leaderboard-item:hover {
+    background-color: #f0f8ff;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #leaderboardbox {
+        width: 90%;
+    }
+}
+#restartbtn1{
+    font-size: 1.5em;
+    float: left;
+    padding: 5px 5px;
+    border-radius: 8px;
+    border: 1px solid gold;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 1s ease;
+    margin-top: 10px;
+}
+
+#restartbtn1:hover{
+    background-color: white;
+    color: black;
+}

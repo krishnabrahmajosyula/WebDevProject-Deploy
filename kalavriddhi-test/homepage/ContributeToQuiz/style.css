@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;600;700&display=swap');
+body{
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    background-repeat: repeat;
+    margin: 0;
+    padding: 0;
+}
+body::-webkit-scrollbar{
+    display:none;
+}
+#mainHeading,#heading{
+    font-size: 2.5em;
+    font-weight: 510;
+    font-family: 'poppins';
+    background: linear-gradient(90deg, orange, white,lightblue, green);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text; /* For Safari */
+    color: transparent;
+    animation: gradientAnimation 3s ease-in-out infinite,slide-up 0.5s ease forwards;
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+#home {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+#homebtn {
+    width: 80px; /* Adjust based on logo size */
+    height: 80px; /* Adjust based on logo size */
+    background: transparent;
+    outline: none;
+    border: 3px solid white; /* White border */
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer;
+    position: fixed;
+    top: 40px;
+    padding: 0;
+    transition: 0.3s;
+    /* box-shadow: 0px 4px 8px white; */
+    z-index : 1000; /* Light shadow effect */
+  }
+  
+  #logo {
+    width: 100%; /* Make logo fit inside button */
+    height: 100%;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+  
+  #homebtn:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1); /* Slightly enlarges button on hover */
+    border-color: white; /* Keeps the border white on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow on hover */
+  }
+#ContributeBox{
+    backdrop-filter: blur(5px);
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gold;
+    box-shadow: 0px 3px 8px gold;
+    width: 90%;
+    max-width: 450px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;    /* Allow absolute positioning */
+    top: 55%;              /* Move down to the middle of the page */
+    left: 50%;             /* Move right to the middle of the page */
+    transform: translate(-50%, -50%);
+    padding: 30px 20px;
+    border-radius: 15px;
+    animation: wave 0.5s ease forwards;
+    transform-origin: center;
+    color: gold;
+    font-family: 'poppins';
+    margin-top: 60px;
+}
+#question {
+    padding: 10px;     /* Add padding for extra spacing */
+    display: inline-block; /* Optional: keeps label inline */
+    opacity: 0; /* Start invisible */
+    transform: translateX(-100%); /* Start off-screen to the left */
+    animation: slide-in-left 0.5s ease forwards;
+}
+
+#questionbox {
+    width: 300px;  /* Set desired width */
+    height: 40px;  /* Set desired height */
+    padding: 8px;  /* Optional: add padding for better spacing */
+    font-size: 1em;  /* Adjust font size as needed */
+    box-sizing: border-box; /* Ensures padding is included in the total width and height */
+    border: 2px solid gold;
+    border-radius: 5px;
+    font-family: 'poppins';
+    font-weight: 510;
+}
+#questionbox,#option1,#option2,#option3,#option4{
+    width: 100%;
+    max-width: 300px;  /* Set desired width */
+    height: 40px;  /* Set desired height */
+    padding: 8px;  /* Optional: add padding for better spacing */
+    font-size: 1em;  /* Adjust font size as needed */
+    box-sizing: border-box; /* Ensures padding is included in the total width and height */
+    border: 2px solid gold;
+    border-radius: 5px;
+    font-family: 'poppins';
+    font-weight: 510;
+}
+#title {
+    padding: 10px;     /* Add padding for extra spacing */
+    display: inline-block; /* Optional: keeps label inline */
+    opacity: 0; /* Start invisible */
+    transform: translateX(-100%); /* Start off-screen to the left */
+    animation: slide-in-left 0.5s ease forwards;
+}
+
+#titlebox {
+    width: 300px;  /* Set desired width */
+    height: 40px;  /* Set desired height */
+    padding: 8px;  /* Optional: add padding for better spacing */
+    font-size: 1em;  /* Adjust font size as needed */
+    box-sizing: border-box; /* Ensures padding is included in the total width and height */
+    border: 2px solid gold;
+    border-radius: 5px;
+    font-family: 'poppins';
+    font-weight: 510;
+}
+#submit{
+    font-size: 1.2em;
+    font-family: 'poppins';
+    border-radius: 30px;
+    font-weight: 510;
+    color: white;
+    background-color: black;
+    width: auto;
+    align-items: center;
+    border: 1px solid;
+    transform-origin: center;
+    transition: transform 0.5s ease, color 0.5s ease, background-color 0.5s ease; /* Specify properties */
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+#submit:hover{
+    color: black;
+    background-color: white;
+    transform: scale(1.2);
+}
+@keyframes slide-up {
+    0% {
+        transform: translate(0, 20%); /* Start below its original position */
+        opacity: 0; /* Start invisible */
+    }
+    100% {
+        transform: translate(0, 0); /* End at its original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+@keyframes scale {
+    0% {
+        transform: scale(0); /* Start at 0 size */
+        opacity: 0; /* Start invisible */
+    }
+    100% {
+        transform: scale(1); /* End at full size */
+        opacity: 1; /* Fully visible */
+    }
+}
+@keyframes wave {
+    0% {
+        opacity: 0; /* Start invisible */
+        transform: translate(-50%, -60%) scale(0.5); /* Scale down */
+    }
+    50% {
+        opacity: 1; /* Fully visible */
+        transform: translate(-50%, -50%) scale(1.05); /* Scale up a bit */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1); /* Set to final position */
+    }
+}
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-100%); /* Start off-screen left */
+        opacity: 0; /* Start invisible */
+    }
+    100% {
+        transform: translateX(0); /* End in its original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+@media screen and (max-width: 600px) {
+    #ContributeBox {
+        top: 50%;
+        padding: 15px;
+    }
+
+    #heading {
+        font-size: 1.5em; 
+    }
+
+    #submit {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}

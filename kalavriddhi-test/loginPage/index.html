@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header id="home">
+        <button id="homebtn" onclick="window.location.href='../homepage/index.html'">
+          <img src="./home_icon.jpg" alt="Home" id="logo" />
+        </button>
+      </header>
+    <header id="header">
+        <p id="mainHeading">Welcome back to KalaVriddhi</p>
+    </header>
+    <div id="loginBox">
+        <form method="post" class="login-form" id="loginForm">
+            <p id="heading">Login</p>
+            <!-- Username with user icon -->
+            <div class="input-container">
+                <i class="fas fa-user"></i>
+                <input id="username" type="text" placeholder="Username" autocomplete="off" required>
+            </div>
+            <br>
+
+            <!-- Password with eye toggle icon -->
+            <div class="input-container">
+                <input id="password" type="password" placeholder="Password" autocomplete="off" required>
+                <i class="fas fa-eye" id="togglePassword"></i>
+            </div>
+            <br>
+            <label id="remember">
+                <input type="checkbox" id="remember">
+                Remember me
+            </label>
+            <br>
+            <label id="adminCheckLabel">
+                <input type="checkbox" id="adminCheck">
+                Are you admin?
+            </label>            
+            <br>
+            <br>
+            <button id="login">Login</button>
+            <p style="font-weight: 501;">Don't have an account? <a href="../signin/signin.html" style="color: gold; font-weight: 700;" target="_self">SignUp</a></p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
