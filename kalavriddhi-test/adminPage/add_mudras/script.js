@@ -92,7 +92,7 @@ async function retreiveMudras() {
     cont.innerHTML="";
     try{
         console.time("API Call");
-        const response=await fetch(getModelAPI,{method:"GET",headers:{'Content-Type': 'application/json'},mode:"cors"});
+        const response=await fetch(getModelAPI,{method:"GET",headers:{'Content-Type': 'application/json'},mode:"no-cors"});
         console.time("API Call");
         const listOfMudras=await response.json();
 
