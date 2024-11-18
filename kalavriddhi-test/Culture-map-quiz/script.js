@@ -48,7 +48,7 @@ window.onload=()=>{
 }
 async function fetchRandomQuestions() {
     try {
-        const response = await fetch("https://kalavriddhi-backend-1umy.onrender.com/quiz/random");
+        const response = await fetch("https://kalavriddhi-backend-ug2-jlyt.onrender.com/quiz/random");
         const questions = await response.json();
         if (response.ok) {
             // Populate questions in your HTML based on the questions fetched

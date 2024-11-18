@@ -3,7 +3,7 @@ const renderEngine=new BABYLON.Engine(canvasScreen,true);
 
 async function getModelfromDB(name){
     try{
-        const response=await fetch(`https://kalavriddhi-backend-1umy.onrender.com/addModel/models?name=${name}`);
+        const response=await fetch(`https://kalavriddhi-backend-ug2-jlyt.onrender.com/addModel/models?name=${name}`);
         if(!response.ok){
             throw new Error("Unable to retrieve model data");
         }

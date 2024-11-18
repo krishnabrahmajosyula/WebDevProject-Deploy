@@ -1,6 +1,6 @@
 async function fetchQuestions() {
     try {
-        const response = await fetch("https://kalavriddhi-backend-1umy.onrender.com/questions/display/display");
+        const response = await fetch("https://kalavriddhi-backend-ug2-jlyt.onrender.com/questions/display/display");
 
         // Check if the response status is OK (2xx)
         if (!response.ok) {

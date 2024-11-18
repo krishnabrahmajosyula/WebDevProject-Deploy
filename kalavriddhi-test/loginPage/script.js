@@ -29,7 +29,7 @@ async function Validate(){
     const password=document.getElementById('password').value;
 
     try{
-        const response=await fetch("https://kalavriddhi-backend-1umy.onrender.com/auth/login",{
+        const response=await fetch("https://kalavriddhi-backend-ug2-jlyt.onrender.com/auth/login",{
             method: "POST",
             headers:{
                 "Content-Type": "application/json"
