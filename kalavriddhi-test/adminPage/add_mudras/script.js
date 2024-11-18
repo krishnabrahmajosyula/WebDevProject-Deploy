@@ -129,6 +129,7 @@ async function deleteMudra(id){
     try{
         const response=await fetch(`https://kalavriddhi-backend-ug2-jlyt.onrender.com/getmudras/deletemudra/${id}`,{
             method: "DELETE",
+            mode:"cors",
         });
         if(response.ok){
             alert("Mudra deleted successfully");
@@ -144,46 +145,46 @@ async function deleteMudra(id){
 }
 
 
-const getDanceModelsAPI="https://kalavriddhi-backend-ug2-jlyt.onrender.com/getdancemodels/showdancemodels";
+// const getDanceModelsAPI="https://kalavriddhi-backend-ug2-jlyt.onrender.com/getdancemodels/showdancemodels";
 
-async function retreiveDanceModels(){
-    const loader=document.getElementById("loader");
-    const container=document.getElementById("listofModels");
-    loader.style.display="block";
-    container.innerHTML="";
+// async function retreiveDanceModels(){
+//     const loader=document.getElementById("loader");
+//     const container=document.getElementById("listofModels");
+//     loader.style.display="block";
+//     container.innerHTML="";
 
-    try{
-        console.time("dance models API called.");
-        const response=await fetch(getDanceModelsAPI);
-        console.timeEnd("dance models API call");
-        const danceModelsList=await response.json();
-        if(Array.isArray(danceModelsList) && danceModelsList.length>0){
-            renderDanceModels(danceModelsList);
-        }else{
-            container.innerHTML="<p>No dance models available.</p>";
-        }
-    }catch(err){
-        console.error("Error in fetchin dance models:",err);
-        container.innerHTML="<p>Unable to load dance models from the database.</p>";
-    }finally{
-        loader.style.display="none";
-    }
+//     try{
+//         console.time("dance models API called.");
+//         const response=await fetch(getDanceModelsAPI);
+//         console.timeEnd("dance models API call");
+//         const danceModelsList=await response.json();
+//         if(Array.isArray(danceModelsList) && danceModelsList.length>0){
+//             renderDanceModels(danceModelsList);
+//         }else{
+//             container.innerHTML="<p>No dance models available.</p>";
+//         }
+//     }catch(err){
+//         console.error("Error in fetchin dance models:",err);
+//         container.innerHTML="<p>Unable to load dance models from the database.</p>";
+//     }finally{
+//         loader.style.display="none";
+//     }
 
-    function renderDanceModels(models){
-        const container=document.getElementById("listofModels");
-        container.innerHTML="";
-        const fragment=document.createDocumentFragment();
+//     function renderDanceModels(models){
+//         const container=document.getElementById("listofModels");
+//         container.innerHTML="";
+//         const fragment=document.createDocumentFragment();
 
-        models.forEach(model=>{
-            const modelCard=document.createElement("div");
-            modelCard.classList.add("mudra-element");
-            modelCard.innerHTML=`<h3>${model.name}
-                            <button class="delete-btn" onclick="deleteMudra('${model._id}')">Delete</button>`;
-                            fragment.appendChild(modelCard);
-        });
-        container.appendChild(fragment);
-    }
-}
+//         models.forEach(model=>{
+//             const modelCard=document.createElement("div");
+//             modelCard.classList.add("mudra-element");
+//             modelCard.innerHTML=`<h3>${model.name}
+//                             <button class="delete-btn" onclick="deleteMudra('${model._id}')">Delete</button>`;
+//                             fragment.appendChild(modelCard);
+//         });
+//         container.appendChild(fragment);
+//     }
+// }
 window.onload=function(){
     retreiveMudras();
     // retreiveDanceModels();
