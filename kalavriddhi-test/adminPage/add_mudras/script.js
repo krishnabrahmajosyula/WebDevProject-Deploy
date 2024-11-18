@@ -92,7 +92,7 @@ async function retreiveMudras() {
     cont.innerHTML="";
     try{
         console.time("API Call");
-        const response=await fetch(getModelAPI,{method:"GET",headers:{'Content-Type': 'application/json'},mode:"no-cors"});
+        const response=await fetch(getModelAPI,{method:"GET",headers:{'Content-Type': 'application/json'}});
         console.time("API Call");
         const listOfMudras=await response.json();
 
@@ -100,7 +100,6 @@ async function retreiveMudras() {
             renderListOfMudras(listOfMudras);
         }else{
             document.getElementById("listofModels").innerHTML="<p>No Mudras are available</p>";
-
         }
     }catch(error){
         console.error("Error in fetching Mudras:",error);
@@ -129,7 +128,7 @@ async function deleteMudra(id){
     try{
         const response=await fetch(`https://kalavriddhi-backend-ug2-jlyt.onrender.com/getmudras/deletemudra/${id}`,{
             method: "DELETE",
-            mode:"cors",
+            // mode:"cors",
         });
         if(response.ok){
             alert("Mudra deleted successfully");
