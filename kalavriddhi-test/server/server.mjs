@@ -18,12 +18,19 @@ import featureRequestRoute from "./routes/featureRequestRouter.mjs";
 
 const application=express();
 
+
 //this is the middleware that is used for setting up the express server
+application.use(cors({
+    origin:"https://web-dev-project-deploy.vercel.app",
+    credentials:true,
+    methods:['GET','POST','PUT','DELETE','OPTIONS'],
+}));
+application.options('*',cors());
 application.use(bodyParser.json());
 application.use(express.json());
 application.use(express.urlencoded({extended:true}));
 application.use(express.static("public"));
-application.use(cors());
+
 
 //these are the routes that are handled in the corresponding files
 application.use("/auth",authentication);
