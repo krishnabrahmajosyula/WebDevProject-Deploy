@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             return;
         }
         try{
-            const response=await fetch("https://kalavriddhi-backend-sp8g.onrender.com/auth/signin",{
+            const response=await fetch("https://kalavriddhi-backend-1umy.onrender.com/auth/signin",{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify(signInData),

@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded",function (){
         formData.append("category",category);
     
         try{
-            const res=await fetch("https://kalavriddhi-backend-sp8g.onrender.com/addModel/uploadmodel",{
+            const res=await fetch("https://kalavriddhi-backend-1umy.onrender.com/addModel/uploadmodel",{
                 method:"POST",
                 body:formData,
             });
