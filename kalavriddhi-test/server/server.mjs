@@ -21,7 +21,7 @@ const application=express();
 
 //this is the middleware that is used for setting up the express server
 application.use(cors({
-    origin:"https://web-dev-project-deploy.vercel.app/",
+    origin:"https://web-dev-project-deploy.vercel.app",
     credentials:true,
     methods:['GET','POST','PUT','DELETE','OPTIONS'],
 }));
