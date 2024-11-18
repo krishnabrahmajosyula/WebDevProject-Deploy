@@ -2,6 +2,7 @@ const passwordInput=document.getElementById('password');
 const togglePassword=document.getElementById('togglePassword');
 const loginForm=document.getElementById('loginForm');
 const adminCheck=document.getElementById('adminCheck');
+
 togglePassword.addEventListener('click',()=>{
     const type=passwordInput.getAttribute('type')==='password'?'text':'password';
     passwordInput.setAttribute('type',type);
@@ -12,9 +13,14 @@ togglePassword.addEventListener('click',()=>{
 
 loginForm.addEventListener('submit',async (event)=>{
     event.preventDefault();
+    const username=document.getElementById('username').value.trim();
+    const password=document.getElementById('password').value.trim();
     if(adminCheck.checked){
-        if(await Validate1()){
+        if(username==="KalaVriddhi" && password==="kalavriddhi"){
             window.location.href="../adminPage/index.html"
+        }
+        else{
+            window.alert("Invalid admin credentials");
         }
     }
     else{
@@ -25,9 +31,8 @@ loginForm.addEventListener('submit',async (event)=>{
 })
 
 async function Validate(){
-    const username=document.getElementById('username').value;
-    const password=document.getElementById('password').value;
-
+    const username=document.getElementById('username').value.trim();
+    const password=document.getElementById('password').value.trim();
     try{
         const response=await fetch("https://kalavriddhi-backend-ug2-jlyt.onrender.com/auth/login",{
             method: "POST",
@@ -56,8 +61,7 @@ async function Validate(){
 }
 
 async function Validate1(){
-    const username=document.getElementById('username').value;
-    const password=document.getElementById('password').value;
+    
     const isAdmin=true;
     try{
         const response=await fetch("https://kalavriddhi-backend-1umy.onrender.com/auth/login",{

@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded",function (){
             const res=await fetch("https://kalavriddhi-backend-ug2-jlyt.onrender.com/addModel/uploadmodel",{
                 method:"POST",
                 body:formData,
+                mode:"cors",
             });
             if(!res.ok){
                 alert("Unable to upload model. A similar model exists with this name.");
